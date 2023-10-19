@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyV_GGMI</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+</head>
+<body>
+    <header><h1> Cifrado Viggenere y Cesar</h1></header>
+    <div class="container"><div class="center-block">
+        <article class="datos">
+            <p> <h3>Ingrese el texto que desee cifrar:</h3>
+            <br></p>
+            <br>
+            <div class="col-md-12" >
+                <div class="form-group" >
+                    <textarea type="text" name="texto1" id="texto1" class="form-control"></textarea>
+                    <p> <h5>Elija un método de cifrado:</h5>
+                </div>
+            </div>  
+            <br>
+            <p><input type="button" class="btn btn-infos" value="Cesar" onclick="lonCifrar()"">
+                <input type="button" class="btn btn-infos2" value="Viggenere" onclick="lonDescifrar()">
+        </article>
+        <br>
+        <br>
+        <div id="cesarDiv" style="display: none">
+            <div class="row" >
+                <div class="col-md-12" >
+                    <div class="form-group" >
+                        <label for="desplazamiento">Desplazamiento </label>
+                        <br>
+                        <input type="range" min="1" max="25" step="1" value="1" id="desplazamiento" name="desplazamiento" class="form-control">
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="col-md-12" >
+                    <div class="form-group" >
+                        <label for="cifrado">Texto cifrado: </label>
+                        <textarea type="text" name="cifrado" id="cifrado" class="form-control" disabled="disabled">  </textarea>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row" >
+                <div class="col-md-12" >
+                    <div class="form-group" >
+                        <label for="texto2">Texto a descifrar: </label>
+                        <textarea type="text" name="texto2" id="texto2" class="form-control"></textarea>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="col-md-12" >
+                    <div class="form-group" >
+                        <label for="desplazamiento2">Desplazamiento </label>
+                       
+                        <input type="range" min="1" max="25" step="1" value="1" id="desplazamiento2" name="desplazamiento2" class="form-control">
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="col-md-12" >
+                    <div class="form-group" >
+                        <label for="descifrado">Texto descifrado: </label>
+                        <textarea type="text" name="descifrado" id="descifrado" class="form-control" disabled="disabled">  </textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="viggenereDiv" style="display: none">
+            
+            <p><input type="button" class="btn btn-info" value="Cifrar" onclick="longitudCifrar()"">
+                <input type="button" class="btn btn-info" value="Descifrar" onclick="longitudDescifrar()">
+                <input type="button" class="btn btn-info" value="Reiniciar" onclick="reiniciar()"></p>
+                <p> <h3>Por favor ingresa la clave secreta</h3></p>
+                <br>
+                <p><input type="text" name="posicionamiento" id="txtClave" onpaste="return false;" ondrop="return false;"></p>
+                <br>
+                <textarea  id="res" onpaste="return false;" ondrop="return false;" ></textarea>
+                <br>
+                <p><input type="button" class="btn btn-info" value="Copiar" onclick="colocar()"></p>
+        </div>
+        
+    </div>
+
+</body>
+<script src="js/cyv.js"></script>
+</html>
